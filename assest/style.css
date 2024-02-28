@@ -318,6 +318,12 @@ body{
   margin: auto;
   height: auto;
   padding: 30px;
+  background-image: url(/assest/images/bg-lampnet.svg);
+  background-size: cover;
+  background-color: rgb(238, 238, 31);
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+  border-radius: 10px;
 }
 .email-sub-container h4, .recieve-news{
   margin-bottom: 20px;
