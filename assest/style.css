@@ -31,12 +31,16 @@ body{
 }
 .hero-links ul{
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 .hero-links ul li{
   list-style-type: none;
   font-size: 20px;
   font-weight: bold;
+}
+
+.ham-close{
+  display: none;
 }
 .hero-links ul li a{
   color: white;
@@ -92,24 +96,19 @@ body{
 .welcome-page{
   background-color: rgb(215, 214, 214);
   margin-top: 80px;
-  padding: 30px 60px 50px 60px;
 }
 .welcome-page .welcom-page-text {
-  display: flex;
   align-items: center;
-  width: 100%;
-
+  padding: 20px;
 } 
 .welcome-page .welcom-page-text h1{
-  font-size: 40px;
+  font-size: 35px;
   color: rgb(27, 27, 27);
-}
-.welcome-page .welcom-page-text span{
-  transform: scale(.8);
-  margin-left: -50px;
 }
 .welcome-page p{
   color: #5284CE ;
+  width: 95%;
+  padding: 20px;
 }
 .welcome-page a{
   color: #0066FF;
@@ -118,8 +117,8 @@ body{
 }
 
 .tech-news{
-  margin-top: 80px;
-  padding: 20px 60px;
+  width: 90%;
+  margin: auto;
 }
 .tech-news h2{
   margin-bottom: 30px;
@@ -130,7 +129,6 @@ body{
 }
 .tech-news .tech-news-content .tech-news-card{
   width: 33.3%;
-  padding: 0 10px;
 }
 .tech-news .tech-news-content .tech-news-card h2{
   margin-bottom: 20px;
@@ -151,14 +149,13 @@ body{
 
 .spotlight{
   margin-top: 80px;
-  width: 100%;
   background-color: rgb(219, 219, 219);
   padding-top: 20px;
   padding-bottom: 30px;
 }
 .spotlight h2{
   margin-bottom: 20px;
-  padding-left: 110px;
+  margin-left: 20px;
 }
 .spotlight-content{
   width: 80%;
@@ -167,9 +164,13 @@ body{
   padding: 30px 30px 0 30px;
   border-radius: 30px;
 }
-.spotlight-content img{
+.spotlight-content .img-spotlight{
+  background-image: url(images/lampnet-bg.svg);
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  margin-bottom: 30px;
+  height: 200px;
+  border-radius: 10px;
 }
 .spotlight-text{
   padding: 30px;
@@ -181,17 +182,18 @@ body{
 }
 .product{
   width: 95%;
-  margin: 90px auto;
-  padding: 0 30px;
+  margin-left: 40px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 .product-container{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex !important;
+  justify-content: space-between !important;
+  gap: 30px;
 }
 .product-1{
-  width: 60%;
+  width: 50%;
 }
 .product-content{
   display: flex;
@@ -210,7 +212,7 @@ body{
   color: #5284CE;
   position: absolute;
   padding-top: 20px;
-  right: 0;
+  right: 60px;
   bottom: 0;
 }
 .content-product .content-texts h3{
@@ -224,8 +226,10 @@ body{
 
 
 .product-content2{
-  width: 40%;
+  width: 50%;
   position: relative;
+  left: 100px;
+  top: -120px;
 }
 .product-content2 img{
   width: 100%;
@@ -373,10 +377,8 @@ body{
 .footer-container{
   display: flex;
   width: 80%;
-  margin: auto;
-  gap: 80px;
-  justify-content: space-between;
-  padding: 20px;
+  gap: 30px;
+  padding: 20px 0 20px 20px;
 }
 .footer-content{
   width: 25%;
@@ -389,6 +391,10 @@ body{
 .footer-content a{
   text-decoration: none;
   color: white;
+  transition: .4s ease;
+}
+.footer-content a:hover{
+  color: #0066FF;
 }
 .socials{
   display: flex;
@@ -413,9 +419,9 @@ body{
   color: white;
 }
 
-@media screen and (max-width: 840px){
+@media screen and (min-width: 840px){
   .event-text a{
-    left: 20px;
+    left: 0;
   }
   .more-event{
     left: 20px;
@@ -428,7 +434,7 @@ body{
     width: 100%;
   }
   .product-container{
-    flex-direction: column;
+    display: block;
   }
   .product hr{
     display: none;
@@ -441,8 +447,9 @@ body{
     margin-bottom: 0;
   }
   .product-content2{
-    width: 80%;
-    margin: auto;
+    left: 100px;
+    top: 20px;
+    width: 100%;
   }
   .input-btn input{
     width: 60px;
@@ -450,4 +457,134 @@ body{
   .input-btn button{
     width: 50%;
   }
+  .product{
+    width: 80%;
+  }
+  .content-icon img{
+    position: relative;
+    left: 160px;
+    margin-bottom: 30px;
+  }
+  .product h2{
+    margin-bottom: 30px;
+  }
+  .footer-container{
+    margin: 0 10px;
+  }
+  /* .welcome-page .welcom-page-text {
+    display: block;
+  }
+  .welcome-page .welcom-page-text span{
+    transform: scale(.4);
+    margin-left: 5px;
+  } */
+}
+
+
+@media screen and (max-width: 640px){
+  .hero-links ul{
+    flex-direction: column;
+    background-color: #1e4d94;
+    padding: 60px 20px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: .3s ease;
+    transform: translateY(-2000px);
+  }
+  .ham-bars{
+    display: block !important;
+  }
+  .fa-bars{
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    background-color: #0066FF;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .fa-close{
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 23px;
+    position: absolute;
+   right: 70px;
+   top: 20px;
+  }
+  .hero-avatar{
+    display: none;
+  }
+  .hero-text-logo img{
+    width: 50%;
+  }
+  /* .welcome-page .welcom-page-text h1{
+    font-size: 21px;
+  }
+  .welcome-page .welcom-page-text{
+    display: block;
+  }
+  .welcome-page .welcom-page-text span img{
+  transform: scale(.7);
+  margin-left: -40px;
+  } */
+  
+.tech-news{
+  padding: 20px 20px;
+}
+  .tech-news .tech-news-content{
+    flex-direction: column;
+  }
+  .tech-news .tech-news-content .tech-news-card{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .spotlight-content img{
+    height: 200px;
+  }
+  .product-container{
+    flex-direction: column;  
+  }
+  .product-1{
+    width: 90%;
+    margin-top: 20px;
+  }
+  .content-product{
+    width: 100%;
+  }
+  .product-content2{
+   display: none;
+  }
+ .product-content{
+  flex-direction: column;
+  width: 100%;
+ }
+ .content-icon img{
+  left: 0 !important;
+  width: 30%;
+ }
+ .events-container{
+  flex-direction: column !important;
+  width: 100%;
+ }
+ .event-content{
+  width: 100%;
+ }
+ .tech-events hr{
+  display: none !important;
+ }
+ .product hr{
+  display: none;
+ }
+ .discussion a{
+  left: 0px;
+ }
+ .footer-content h3{
+  margin-top: 60px;
+ }
+ .email-sub-input{
+  width: 100%;
+ }
 }
