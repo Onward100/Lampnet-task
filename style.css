@@ -4,6 +4,10 @@
 }
 body{
   font-family: 'poppins', Courier, monospace;
+  scroll-behavior: smooth;
+}
+html{
+  scroll-behavior: smooth;
 }
 .hero-overlay{
   width: 100%;
@@ -31,7 +35,8 @@ body{
 }
 .hero-links ul{
   display: flex;
-  gap: 20px;
+  gap: 50px;
+  transform: translateY(0);
 }
 .hero-links ul li{
   list-style-type: none;
