@@ -15,7 +15,7 @@ body{
   z-index: 1;
 }
 .hero-page{
-  background-image: url(/assest/images/lampnet-bg-first.svg);
+  background-image: url(/images/lampnet-bg-first.svg);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -40,7 +40,7 @@ body{
 }
 
 .ham-close{
-  display: none;
+  display: none !important;
 }
 .hero-links ul li a{
   color: white;
@@ -118,7 +118,7 @@ body{
 
 .tech-news{
   width: 90%;
-  margin: auto;
+  margin: 50px auto;
 }
 .tech-news h2{
   margin-bottom: 30px;
@@ -126,6 +126,7 @@ body{
 .tech-news .tech-news-content{
   display: flex;
   width: 100%;
+  gap: 20px;
 }
 .tech-news .tech-news-content .tech-news-card{
   width: 33.3%;
@@ -493,7 +494,7 @@ body{
     transition: .3s ease;
     transform: translateY(-2000px);
   }
-  .ham-bars{
+  .ham-close{
     display: block !important;
   }
   .fa-bars{
@@ -520,16 +521,6 @@ body{
   .hero-text-logo img{
     width: 50%;
   }
-  /* .welcome-page .welcom-page-text h1{
-    font-size: 21px;
-  }
-  .welcome-page .welcom-page-text{
-    display: block;
-  }
-  .welcome-page .welcom-page-text span img{
-  transform: scale(.7);
-  margin-left: -40px;
-  } */
   
 .tech-news{
   padding: 20px 20px;
