@@ -19,7 +19,7 @@ html{
   z-index: 1;
 }
 .hero-page{
-  background-image: url(/images/lampnet-bg-first.svg);
+  background-image: url(lampnet-bg-first.svg);
   background-position: center;
   background-size: cover;
   width: 100%;
@@ -171,7 +171,7 @@ html{
   border-radius: 30px;
 }
 .spotlight-content .img-spotlight{
-  background-image: url(images/lampnet-bg.svg);
+  background-image: url(lampnet-bg.svg);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -384,7 +384,7 @@ html{
   display: flex;
   width: 80%;
   gap: 30px;
-  padding: 20px 0 20px 20px;
+  padding: 40px 0 20px 40px;
 }
 .footer-content{
   width: 25%;
@@ -542,6 +542,9 @@ html{
   }
   .product-container{
     flex-direction: column;  
+  }
+  .event-text a{
+    left: 0;
   }
   .product-1{
     width: 90%;
